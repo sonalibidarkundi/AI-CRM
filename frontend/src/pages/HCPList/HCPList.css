@@ -1,0 +1,39 @@
+.page-layout{
+    display:flex;
+}
+
+
+.page-content{
+    margin-left:260px;
+    width:100%;
+    padding:30px;
+    background:#f5f7fb;
+    min-height:100vh;
+}
+
+
+.page-content table{
+
+    width:100%;
+    background:white;
+    margin-top:30px;
+    border-collapse:collapse;
+
+}
+
+
+.page-content th{
+
+    background:#2563eb;
+    color:white;
+    padding:15px;
+
+}
+
+
+.page-content td{
+
+    padding:15px;
+    border-bottom:1px solid #ddd;
+
+}

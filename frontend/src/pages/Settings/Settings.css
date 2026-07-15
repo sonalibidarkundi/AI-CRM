@@ -1,0 +1,29 @@
+.settings-card{
+
+background:white;
+padding:30px;
+width:400px;
+border-radius:15px;
+
+}
+
+
+.settings-card input{
+
+width:100%;
+padding:12px;
+margin:10px 0 20px;
+
+}
+
+
+.settings-card button{
+
+background:#2563eb;
+color:white;
+border:none;
+padding:12px;
+width:100%;
+border-radius:8px;
+
+}
