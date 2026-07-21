@@ -1,108 +1,429 @@
-.dashboard-layout{
+/* Dashboard Main Layout */
+
+.dashboard-layout {
+
     display:flex;
-}
 
-.dashboard-content{
-    margin-left:260px;
+    min-height:100vh;
+
     width:100%;
-    padding:40px;
-    background:#f5f7fb;
-    min-height:100vh;
+
+
+    background-image:
+    url("../../assets/doc4.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+
 }
 
-.dashboard{
-    padding:40px;
-    background:#f5f7fb;
-    min-height:100vh;
+
+.dashboard-content {
+
+    flex:1;
+
+    padding:30px;
+
+    margin-left:250px;
+
 }
 
-.dashboard-header{
-    margin-bottom:30px;
+
+
+
+
+/* Header */
+
+
+.dashboard-header {
+
+    margin-top:20px;
+
+    margin-bottom:35px;
+
 }
 
-.dashboard-header h1{
-    color:#1e3a8a;
-    margin-bottom:10px;
+
+.dashboard-title {
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#060606;
+
+    margin-bottom:8px;
+
 }
 
-.dashboard-header p{
-    color:#555;
+
+.dashboard-subtitle {
+
+    font-size:17px;
+
+    color:#050506;
+
+    font-weight:400;
+
 }
+
+
+
+
+
+
+
+/* Cards Section */
+
+
+.card-container {
+
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+/* Card */
+
+
+.card {
+
+
+    position:relative;
+
+
+    background:
+    rgba(255,255,255,0.8);
+
+
+    backdrop-filter:
+    blur(12px);
+
+
+    border-radius:22px;
+
+
+    padding:28px;
+
+
+    overflow:hidden;
+
+
+    border:1px solid rgba(255,255,255,0.6);
+
+
+    box-shadow:
+
+    0 15px 35px
+    rgba(15,23,42,0.08);
+
+
+    transition:.4s ease;
+
+
+}
+
+
+
+
+
+.card:hover {
+
+
+    transform:
+    translateY(-10px);
+
+
+    box-shadow:
+
+    0 25px 45px
+    rgba(37,99,235,0.18);
+
+
+}
+
+
+
+
+
+/* Top Glow */
+
+
+.card::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:120px;
+
+
+    height:120px;
+
+
+    right:-30px;
+
+
+    top:-30px;
+
+
+    border-radius:50%;
+
+
+    background:#dbeafe;
+
+
+    opacity:.7;
+
+
+}
+
+
+
+
+.card:nth-child(2)::before{
+
+background:#dcfce7;
+
+}
+
+
+
+.card:nth-child(3)::before{
+
+background:#ffedd5;
+
+}
+
+
+
+
+.card:nth-child(4)::before{
+
+background:#ede9fe;
+
+}
+
+
+
+
+
+
+
+/* Number */
+
+
+.card h2 {
+
+
+    position:relative;
+
+
+    font-size:42px;
+
+
+    color:#0f172a;
+
+
+    margin:20px 0 5px;
+
+
+    font-weight:800;
+
+
+}
+
+
+
+
+
+
+/* Text */
+
+
+.card p {
+
+
+    position:relative;
+
+
+    color:#64748b;
+
+
+    font-size:16px;
+
+
+    font-weight:500;
+
+
+}
+
+
+
+
+
+
+
+/* Add fake icons */
+
+
+.card:after {
+
+
+    content:"";
+
+
+    width:55px;
+
+
+    height:55px;
+
+
+    border-radius:16px;
+
+
+    position:absolute;
+
+
+    left:25px;
+
+
+    top:25px;
+
+
+    background:#2563eb;
+
+
+    opacity:.15;
+
+
+}
+
+
+
+
+.card:nth-child(2):after{
+
+background:#16a34a;
+
+}
+
+
+
+.card:nth-child(3):after{
+
+background:#f97316;
+
+}
+
+
+
+
+.card:nth-child(4):after{
+
+background:#9333ea;
+
+}
+
+
+
+
+
+
+
+
+
+/* Responsive */
+
+
+@media(max-width:1200px){
+
 
 .card-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-    margin-bottom:40px;
+
+grid-template-columns:
+repeat(2,1fr);
+
 }
 
-.card{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-    transition:.3s;
+
 }
 
-.card:hover{
-    transform:translateY(-5px);
+
+
+@media(max-width:768px){
+
+
+.dashboard-content{
+
+margin-left:0;
+
+padding:20px;
+
 }
 
-.card h2{
-    color:#2563eb;
-    font-size:35px;
-    margin-bottom:10px;
+
+
+.card-container{
+
+grid-template-columns:1fr;
+
 }
 
-.card p{
-    color:#666;
-}
-
-.recent-section{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-.recent-section h2{
-    margin-bottom:20px;
-    color:#1e3a8a;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-}
-
-table th{
-    background:#2563eb;
-    color:white;
-    padding:12px;
-}
-
-table td{
-    padding:12px;
-    border-bottom:1px solid #ddd;
-}
-
-table tr:hover{
-    background:#f3f4f6;
-}
-
-.dashboard-header{
-    margin-bottom:40px;
-}
 
 .dashboard-title{
-    color:#1e3a8a;
-    font-size:38px;
-    margin-bottom:18px;   /* Space after Dashboard */
-    font-weight:700;
+
+font-size:28px;
+
 }
 
-.dashboard-subtitle{
-    color:#4b5563;
-    font-size:22px;
-    font-weight:500;
+
+}
+
+
+
+
+@media(max-width:480px){
+
+
+.dashboard-content{
+
+padding:15px;
+
+}
+
+
+.card{
+
+padding:25px;
+
+}
+
+
+.card h2{
+
+font-size:34px;
+
+}
+
+
 }

@@ -11,7 +11,6 @@ function Header() {
 
   return (
     <header className="header">
-
       <div className="search-box">
         <FaSearch className="search-icon" />
 
@@ -22,13 +21,9 @@ function Header() {
       </div>
 
       <div className="header-right">
-
         <span className="date">{today}</span>
 
-        <div className="notification">
-          <FaBell />
-          <span className="badge">3</span>
-        </div>
+        
 
         <div className="profile">
           <FaUserCircle className="profile-icon" />
@@ -38,9 +33,7 @@ function Header() {
             <p>Field Representative</p>
           </div>
         </div>
-
       </div>
-
     </header>
   );
 }

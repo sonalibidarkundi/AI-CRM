@@ -1,19 +1,15 @@
-import InteractionForm from "../../components/InteractionForm/InteractionForm";
+import Sidebar from "../../components/Sidebar/Sidebar";
+import Header from "../../components/Header/Header";
 import ChatPanel from "../../components/ChatPanel/ChatPanel";
 
 function LogInteraction() {
   return (
-    <div style={{ padding: "30px" }}>
-      <h1>Log Interaction</h1>
+    <div className="dashboard-layout">
+      <Sidebar />
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "20px",
-        }}
-      >
-        <InteractionForm />
+      <div className="dashboard-content">
+        <Header />
+
         <ChatPanel />
       </div>
     </div>

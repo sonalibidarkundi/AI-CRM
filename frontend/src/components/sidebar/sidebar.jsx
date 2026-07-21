@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import {
   FaHome,
   FaUserMd,
+  FaPlusCircle,
   FaClipboardList,
   FaChartBar,
   FaCog,
@@ -36,6 +37,12 @@ function Sidebar() {
         <li onClick={() => navigate("/hcp")}>
           <FaUserMd />
           <span>HCP List</span>
+        </li>
+
+
+        <li onClick={() => navigate("/add-hcp")}>
+          <FaPlusCircle />
+          <span>Add HCP</span>
         </li>
 
 
